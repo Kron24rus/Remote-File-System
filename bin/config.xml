@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="controller" class="tea.tess.server.Controller">
+        <property name="authorizeCommand" value="authorize"/>
+        <property name="registerCommand" value="register"/>
+        <property name="wrongParamsCountExceptionMessage" value="wrong count of parameters"></property>
+    </bean>
+
+    <bean id="FScontroller" class="tea.tess.server.FileSystemController">
+        <property name="cd" value="cd"/>
+        <property name="mkdir" value="mkdir"/>
+        <property name="ls" value="ls"/>
+        <property name="touch" value="touch"/>
+        <property name="cat" value="cat"/>
+        <property name="push" value="push"/>
+        <property name="get" value="get"/>
+    </bean>
+</beans>
